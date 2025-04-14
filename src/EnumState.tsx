@@ -6,7 +6,7 @@ export function EnumState() {
     const [isInProgress, setInProgress] = useState(false);
     const [isFinished, setFinished] = useState(false);
     const [result, setResult] = useState<number | null>(null);
-    const timeoutRef = useRef<number | null>(null);
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
         return () => {
